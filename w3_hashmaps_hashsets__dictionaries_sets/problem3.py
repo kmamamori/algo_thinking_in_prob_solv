@@ -25,4 +25,5 @@ def mostStringAppearance(str):
 
 if __name__ == "__main__":
 	str = "hello world hello hello world hi"
-	print(mostStringAppearance(str))
+	print("INPUT:\t str =", str)
+	print("OUTPUT:\t", mostStringAppearance(str))

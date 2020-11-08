@@ -22,6 +22,8 @@ def findOne(arr):
 
 if __name__ == "__main__":
 	arr = [2, 2, 1]
-	print(arr, " Result:", findOne(arr))
+	print("INPUT:\tarr =", arr)
+	print("OUTPUT:\t", findOne(arr))
 	arr = [4,1,2,1,2]
-	print(arr, " Result:", findOne(arr))
+	print("INPUT:\tarr =", arr)
+	print("OUTPUT:\t", findOne(arr))

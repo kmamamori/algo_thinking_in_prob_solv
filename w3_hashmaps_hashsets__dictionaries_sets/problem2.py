@@ -18,4 +18,5 @@ def repatedNum(nums):
 
 if __name__ == "__main__":
 	nums = [3,4,6,1,3, 10, -1]
-	print(repatedNum(nums))
+	print("INPUT: nums =", nums)
+	print("OUTPUT: ", repatedNum(nums))

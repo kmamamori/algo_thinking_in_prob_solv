@@ -37,8 +37,7 @@ def typeWithOneRow(str):
 		isRotTop, isRowMiddle, isRowButton = True, True, True
 	return strcp
 
-
-
 if __name__ == "__main__":
 	str = ['Hello', 'Alaska', 'Dad', "Peace"]
-	print(typeWithOneRow(str))
+	print("INPUT:\tstr =", str)
+	print("OUTPUT:\t", typeWithOneRow(str))

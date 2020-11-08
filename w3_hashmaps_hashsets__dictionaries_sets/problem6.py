@@ -20,11 +20,9 @@ def findDifference(s,t):
 		if not ti in ss:
 			return ti
 	return ""
-	
-
-		
 
 if __name__ == "__main__":
 	s = "abcd"
 	t = "abcde"
-	print(findDifference(s,t))
+	print("INPUT:\t s =", s, " t =", t)
+	print("OUTPUT:\t", findDifference(s,t))

@@ -14,15 +14,17 @@ def adding2numbers(testingarray, target):
 			return additionarray
 		if target > testingarray[i] and len(additionarray) == 0:
 			target -= testingarray[i]
-			additionarray.append(testingarray[i])
+			additionarray.append(i)
 		elif testingarray[i] == target and len(additionarray) == 1:
-			additionarray.append(testingarray[i])
+			additionarray.append(i)
 			return additionarray
 
 def main():
 	target = 9
 	nums = [2,7,11,15]
-	print(adding2numbers(nums, target))
+	print("INPUT: nums =", nums)
+	print("INPUT: target = ", target)
+	print("OUTPUT: ", adding2numbers(nums, target))
 	
 
 main()

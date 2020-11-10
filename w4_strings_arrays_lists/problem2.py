@@ -27,45 +27,49 @@
 
 """
 
+
 class Node:
-	def __init__(self, val=0, next=None):
-		self.val = val
-		self.next = next
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 
 def helperFunction(head):
-	if head == None:
-		return 0, 0
-	else:
-		cur, sum = helperFunction(head.next)
-		return cur+1, sum+(pow(2, cur)*head.val)
+    if head == None:
+        return 0, 0
+    else:
+        cur, sum = helperFunction(head.next)
+        return cur+1, sum+(pow(2, cur)*head.val)
+
 
 def convertToDecimal(head):
-	return helperFunction(head)[1]
+    return helperFunction(head)[1]
+
 
 def createLL(arr):
-	head = Node(arr[0])
-	temp = head
-	temp2 = None
-	for i in range(1, len(arr)):
-		temp2 = Node(arr[i])
-		temp.next = temp2
-		temp = temp.next
-	return head
+    head = Node(arr[0])
+    temp = head
+    temp2 = None
+    for i in range(1, len(arr)):
+        temp2 = Node(arr[i])
+        temp.next = temp2
+        temp = temp.next
+    return head
 
 
 if __name__ == "__main__":
-	arr1 = [1,0,1]
-	print("INPUT:\t", arr1)
-	print("OUTPUT:\t", convertToDecimal(createLL(arr1)))
-	arr2 = [0]
-	print("INPUT:\t", arr2)
-	print("OUTPUT:\t", convertToDecimal(createLL(arr2)))
-	arr3 = [1]
-	print("INPUT:\t", arr3)
-	print("OUTPUT:\t", convertToDecimal(createLL(arr3)))
-	arr4 = [1,0,0,1,0,0,1,1,1,0,0,0,0,0,0]
-	print("INPUT:\t", arr4)
-	print("OUTPUT:\t", convertToDecimal(createLL(arr4)))
-	arr5 = [0,0]
-	print("INPUT:\t", arr5)
-	print("OUTPUT:\t", convertToDecimal(createLL(arr5)))
+    arr1 = [1, 0, 1]
+    print("INPUT:\t", arr1)
+    print("OUTPUT:\t", convertToDecimal(createLL(arr1)))
+    arr2 = [0]
+    print("INPUT:\t", arr2)
+    print("OUTPUT:\t", convertToDecimal(createLL(arr2)))
+    arr3 = [1]
+    print("INPUT:\t", arr3)
+    print("OUTPUT:\t", convertToDecimal(createLL(arr3)))
+    arr4 = [1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+    print("INPUT:\t", arr4)
+    print("OUTPUT:\t", convertToDecimal(createLL(arr4)))
+    arr5 = [0, 0]
+    print("INPUT:\t", arr5)
+    print("OUTPUT:\t", convertToDecimal(createLL(arr5)))

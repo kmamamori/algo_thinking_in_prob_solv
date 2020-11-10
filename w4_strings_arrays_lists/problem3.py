@@ -21,25 +21,23 @@
 
 
 def rotateArray(arr, tarkget):
-	arr1 = [0 for i in range(len(arr))]
-	index = 0
-	for i in range(0, len(arr)):
-		index = -len(arr)+k+i
-		arr1[index] = arr[i]
-	return arr1
+    arr1 = [0 for i in range(len(arr))]
+    index = 0
+    for i in range(0, len(arr)):
+        index = -len(arr) + k + i
+        arr1[index] = arr[i]
+    return arr1
 
-		
-	
 
 if __name__ == "__main__":
-	arr = [1,2,3,4,5,6,7]
-	k = 3
-	print("INPUT: k =", k)
-	print("INPUT: arr =", arr)
-	print("OUTPUT: ", rotateArray(arr, k))
+    arr = [1, 2, 3, 4, 5, 6, 7]
+    k = 3
+    print("INPUT: k =", k)
+    print("INPUT: arr =", arr)
+    print("OUTPUT: ", rotateArray(arr, k))
 
-	arr = [-1,-100,3,99]
-	k = 2
-	print("INPUT: k =", k)
-	print("INPUT: arr =", arr)
-	print("OUTPUT: ", rotateArray(arr, k))
+    arr = [-1, -100, 3, 99]
+    k = 2
+    print("INPUT: k =", k)
+    print("INPUT: arr =", arr)
+    print("OUTPUT: ", rotateArray(arr, k))

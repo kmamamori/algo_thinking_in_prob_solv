@@ -17,37 +17,41 @@
 
 """
 
+
 class Node:
-	def __init__(self, val="", next=None):
-		self.val = val
-		self.next = None
+    def __init__(self, val="", next=None):
+        self.val = val
+        self.next = None
+
 
 def getMiddle(head):
-	temp = head
-	len = 0
-	while temp!=None:
-		len += 1
-		temp = temp.next
-	print(len)
-	temp = head
-	len = (len)//2
-	while(len!=0):
-		len-=1
-		temp = temp.next
-	return temp
+    temp = head
+    len = 0
+    while temp != None:
+        len += 1
+        temp = temp.next
+    print(len)
+    temp = head
+    len = (len)//2
+    while(len != 0):
+        len -= 1
+        temp = temp.next
+    return temp
+
 
 def oneloopGetMiddle(head):
-	temp = head
-	len = 0
-	index_middle = 0
-	n = n1
-	while temp!=None:
-		len += 1
-		if (len//2)>index_middle:
-			index_middle = len//2
-			n = n.next
-		temp = temp.next
-	return n
+    temp = head
+    len = 0
+    index_middle = 0
+    n = n1
+    while temp != None:
+        len += 1
+        if (len//2) > index_middle:
+            index_middle = len//2
+            n = n.next
+        temp = temp.next
+    return n
+
 
 n1 = Node('n1')
 n2 = Node('n2')

@@ -20,14 +20,24 @@
 """
 
 
-def rotateArray(arr, tarkget):
-    arr1 = [0 for i in range(len(arr))]
-    index = 0
-    for i in range(0, len(arr)):
-        index = -len(arr) + k + i
-        arr1[index] = arr[i]
-    return arr1
+def rotateArray(arr, k):
+  arr1 = [0 for i in range(len(arr))]
+  index = 0
+  for i in range(0, len(arr)):
+    index = -len(arr) + k + i
+    arr1[index] = arr[i]
+  return arr1
 
+
+def lessSpaceRotateArray(arr, target):
+  while target != 0:
+    temp = arr[-1]
+    for i in range(len(arr)-2, -1, -1):
+      arr[i+1] = arr[i]
+    arr[0] = temp
+    target -= 1
+  return arr
+  
 
 if __name__ == "__main__":
     arr = [1, 2, 3, 4, 5, 6, 7]
@@ -35,9 +45,12 @@ if __name__ == "__main__":
     print("INPUT: k =", k)
     print("INPUT: arr =", arr)
     print("OUTPUT: ", rotateArray(arr, k))
+    print("OUTPUT: ", lessSpaceRotateArray(arr, k))
+    
 
     arr = [-1, -100, 3, 99]
     k = 2
     print("INPUT: k =", k)
     print("INPUT: arr =", arr)
     print("OUTPUT: ", rotateArray(arr, k))
+    print("OUTPUT: ", lessSpaceRotateArray(arr, k))

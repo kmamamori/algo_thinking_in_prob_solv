@@ -1,37 +1,13 @@
-from typing import ClassVar
-
-
 def house_robber(nums):
-    """
-    :type nums: List[int]
-    :rtype: int
-    """
-    
-    
-    tree1 = TreeNode()
-    for n in nums:
-        tree1 = addval(tree1, n)
-    # tree2 = createTree(nums[1:])
-    # return result
-
-
-
-class TreeNode:
-    def __init__(self, x):
-        # self.val = x
-        self.val = x
-        self.children = []
-
-
-def addval(T, n):
-    if T == None:
-        T = TreeNode(n)
-    if T.left == None:
-      T.right = addval(T.right, n)
-    else:
-      T.left = addval(T.left, n)
-    return T
-
-
-def createTree(nums):
-    t = Tree()
+  """
+  :type nums: List[int]
+  :rtype: int
+  """
+  
+  S1 = nums[0]
+  S2 = nums[1] if S1 < nums[1] else S1
+  for w in nums[2:]:
+    if S2 > S1+w: S1 = S2
+    else: S1, S2 = S2, S1+w
+  return S2
+ 

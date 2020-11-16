@@ -43,7 +43,6 @@ def grade_p3():
 
     if test1 == 2 and test2 == 3 and test3 == 377:
         grade += points_per_problem
-
     return grade
 
 

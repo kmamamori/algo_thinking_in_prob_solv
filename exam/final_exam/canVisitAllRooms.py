@@ -1,16 +1,17 @@
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
-        visited, prev = [False for b in range(len(rooms))], [-1 for a in range(len(rooms))] #visited var and previous state
+        if len(rooms) == 0:
+            return True
+        visited = [False for i in range(len(rooms))] #visited
         s = []
         s.append(0) #stack
         visited[0] = True
         while s!=[]: #as long as stack has something
             u = s.pop() #pop the newest value
-            for t in rooms[u]:
-                if not visited[t]: #non checked
-                    visited[t] = True
-                    prev[t] = u
-                    s.append(t) #push
-        if False in visited:
-            return False
-        return True
+            for room in rooms[u]:
+                if room > len(rooms)-1:
+                    return False
+                if not visited[room]: #non checked
+                    visited[room] = True
+                    s.append(room) #push
+        return not False in visited
